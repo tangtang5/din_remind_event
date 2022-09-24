@@ -11,7 +11,7 @@ on:
     branches: [ "main" ]
     
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "0 6 * * *"
     
 #这个意思就是定时每天的14点 但因为这个是国际协调时间UTC 
 #我们比它晚8个小时，所以对我们来说就是定时每天12点的时候 
@@ -42,11 +42,6 @@ jobs:
           python -m pip install --upgrade pip
           pip3 install -r requirements.txt
 
-      # Runs a single command using the runners shell
-      - name: online_python
-        run: |
-          cd "${{ github.workspace }}"
-          python3 test.py
       - name: remind_python
         run: |
           cd "${{ github.workspace }}"
