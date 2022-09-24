@@ -11,10 +11,12 @@ on:
     branches: [ "main" ]
     
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 8 * * *"
+    #定时16点
     
+#要定时的时间+8  
 #这个意思就是定时每天的14点 但因为这个是国际协调时间UTC 
-#我们比它晚8个小时，所以对我们来说就是定时每天12点的时候 
+#我们比它晚8个小时，所以对我们来说就是定时每天22点的时候 
   # Allows you to run this workflow manually from the Actions tab
  # workflow_dispatch:
 
