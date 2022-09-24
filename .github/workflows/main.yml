@@ -11,7 +11,7 @@ on:
     branches: [ "main" ]
     
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "15 8 * * *"
     #定时16点
     
 #要定时的时间+8  
