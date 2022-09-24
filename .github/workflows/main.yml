@@ -42,6 +42,10 @@ jobs:
         run: |
           cd "${{ github.workspace }}"
           python3 test.py
+      - name: remind_python
+        run: |
+          cd "${{ github.workspace }}"
+          python3 demo.py
 
       # Runs a set of commands using the runners shell
       #- name: Run a multi-line script
