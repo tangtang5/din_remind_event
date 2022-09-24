@@ -1,4 +1,4 @@
-echo off
+echo on
 echo ==============cutting line============== > D:\004-python-demo\din\commit.txt
 ::两个>表示在后追加，一个的话代表清除文件中原有的内容后再写入
 
