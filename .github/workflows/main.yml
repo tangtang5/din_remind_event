@@ -12,9 +12,9 @@ on:
   pull_request:
     branches: [ "main" ]
     
-  #schedule:
-    #- cron: "15 8 * * *"
-    #定时16点
+  schedule:
+    - cron: "10 0 * * *"
+    #定时8点10分，但是有延迟，估计会到9点的样子提醒
     
 #要定时的时间+8  
 #这个意思就是定时每天的14点 但因为这个是国际协调时间UTC 
