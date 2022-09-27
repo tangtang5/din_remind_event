@@ -124,7 +124,7 @@ def remind_ding(today_event):
     }
     if today_event:
         s = []
-        init = '宝宝\n，今天又是想你的一天：\n')
+        init = ('宝宝\n，今天又是想你的一天：\n')
         for i in range(len(today_event)):
             p=today_event[i]+'\n'
             s.append(p)
