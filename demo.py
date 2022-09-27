@@ -60,7 +60,8 @@ def get_todayevent(filename):
         date_new = ''.join(date_new[0:10])
         
         local_time = datetime.datetime.now()
-        remind_time = (local_time+datetime.timedelta(days=3)).strftime("%Y-%m-%d")
+        #remind_time = (local_time+datetime.timedelta(days=3)).strftime("%Y-%m-%d")
+        remind_time = (local_time).strftime("%Y-%m-%d")
         remind_time = str(remind_time)
         if remind_time == date_new:
             today_event.append(str(date_event[i][1]))
@@ -123,9 +124,9 @@ def remind_ding(today_event):
     }
     if today_event:
         s = []
-        init = '陈陈\n你有{}件事需要三天内完成：\n'.format(len(today_event))
+        init = '宝宝\n，今天又是想你的一天：\n')
         for i in range(len(today_event)):
-            p='({})'.format(i+1)+today_event[i]+'\n'
+            p=today_event[i]+'\n'
             s.append(p)
         pp = ''.join(s)
         
@@ -140,7 +141,7 @@ def remind_ding(today_event):
                 "content": msg
             },
             "at": {
-                "isAtAll": True
+                "isAtAll": False
                 # ,
                 # "atUserIds":['陈陈']
             }
